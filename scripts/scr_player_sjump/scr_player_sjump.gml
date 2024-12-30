@@ -16,8 +16,6 @@ function scr_player_sjump() {
             hsp = move * movespeed
         }
     }
-    if !instance_exists(obj_afterimage)
-        inst_cr(x, y, obj_afterimage) 
     if sprite_index == spr_player_sjump {
         grav = 0
         vsp -= 0.5 
@@ -35,6 +33,8 @@ function scr_player_sjump() {
             sprite_index = spr_player_idle
             state = states.normal       
         }
+        if !instance_exists(obj_afterimage)
+            inst_cr(x, y, obj_afterimage)
     }
     if sprite_index == spr_player_sjumpcancelstart {
         vsp = 0

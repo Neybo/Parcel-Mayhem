@@ -9,7 +9,7 @@ function scr_collision_init() {
 	terminalVelocity = 10;
 	onMovingPlatform = noone;
 
-	grav = 0.5;		
+	grav = 0.6;		
 	hsp = 0;
 	vsp = 0;
 	prevHsp = 0;
