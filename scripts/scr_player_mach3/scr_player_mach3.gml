@@ -14,6 +14,7 @@ function scr_player_mach3() {
     }
     
     if key_prs(ord("Z")) and grounded {
+        state = states.jump 
         vsp = -10
     }
     

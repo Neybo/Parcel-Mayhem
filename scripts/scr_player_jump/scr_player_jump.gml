@@ -1,4 +1,5 @@
 function scr_player_jump(){
+    if sprite_index != spr_player_mach3 || sprite_index != spr_player_mach3 {
     hsp = move * movespeed
     if move != 0 {
         scale = move
@@ -15,6 +16,7 @@ function scr_player_jump(){
         image_index = 0
         image_speed = 0.35
         state = states.normal
+    }
     }
     if key_prs(ord("X")) {
         vsp = -4
