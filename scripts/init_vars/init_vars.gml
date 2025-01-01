@@ -13,6 +13,7 @@ function init_vars(){
         gpound,
         sjump, // !?!??!
         attack,
+        machjump,
     }
     move = -4
     global.mach_col1 = make_colour_rgb(96, 208, 72)

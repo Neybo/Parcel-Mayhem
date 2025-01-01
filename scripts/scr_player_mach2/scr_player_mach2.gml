@@ -15,8 +15,7 @@ function scr_player_mach2() {
     
     if (key_prs(vk_right) and h_scale == -1) or (key_prs(vk_left) and h_scale == 1) {
         image_index = 0
-        hsp = 0
-        sprite_index = spr_player_machturn
+        sprite_index = spr_player_turn
         state = states.machturn
     }
     

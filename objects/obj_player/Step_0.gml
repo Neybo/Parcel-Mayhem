@@ -41,5 +41,8 @@ switch state {
     case states.attack:
         scr_player_attack()
         break
+    case states.machjump:
+        scr_player_machjump()
+        break
 }
 
