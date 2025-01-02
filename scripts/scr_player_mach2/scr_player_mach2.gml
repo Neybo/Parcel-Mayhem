@@ -21,7 +21,7 @@ function scr_player_mach2() {
     
     if key_prs(ord("Z")) and grounded {
         vsp = -10
-
+        state = states.machjump
     }
     
     if place_meeting_solid(x + h_scale, y) and place_meeting_collision(x, y + 1) {
