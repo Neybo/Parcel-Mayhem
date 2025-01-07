@@ -1,18 +1,18 @@
 function scr_player_sjump() {
-    if sprite_index == spr_player_sjumpprep {
-        /*if move != 0 {
+    if sprite_index == spr_player_sjumpprep or sprite_index ==  spr_player_sjumpleft or sprite_index == spr_player_sjumpright {
+        if move != 0 {
             if h_scale == 1 
                 sprite_index = spr_player_sjumpright
             else if h_scale == -1 
                 sprite_index = spr_player_sjumpleft
+            movespeed = 4
         } else {
-            
-        } */
-        if !key_prs(vk_up) {
+            movespeed = 0
+        }
+        if !keyup {
             vsp = -10
             sprite_index = spr_player_sjump 
         } else {
-            movespeed = 4
             hsp = move * movespeed
         }
     }
@@ -22,16 +22,15 @@ function scr_player_sjump() {
         movespeed = 4
         hsp = move * movespeed
         
-        if key_prs(ord("X")) {
+        if keyaction {
             sprite_index = spr_player_sjumpcancelstart
             vsp = 0
             hsp = 0
         }
         if place_meeting_solid(x, y - 1){
-            vsp = 10
-            image_index = 0
-            sprite_index = spr_player_idle
-            state = states.normal       
+            image_speed = 2
+            sprite_index = spr_player_sjumpland
+            state = states.hitwall     
         }
         if !instance_exists(obj_afterimage)
             inst_cr(x, y, obj_afterimage)

@@ -5,7 +5,7 @@
   "option_audio_error_behaviour":false,
   "option_author":"",
   "option_collision_compatibility":false,
-  "option_copy_on_write_enabled":false,
+  "option_copy_on_write_enabled":true,
   "option_draw_colour":4294967295,
   "option_gameguid":"b5641d9b-b136-4d73-bc77-02dd7edbcd33",
   "option_gameid":"0",

@@ -1,24 +1,25 @@
 function scr_player_mach3() {
     hsp = h_scale * movespeed
     if movespeed < 16 movespeed += 0.1
-    if !key_prs(vk_shift) && sprite_index != spr_player_sjumpcancel {
+    if !keyrun && sprite_index != spr_player_sjumpcancel {
         image_index = 0
         sprite_index = spr_player_machcancel
         state = states.machcancel
     }
     
-    if key_prs(vk_up) and grounded {
+    if keyup and grounded {
         image_index = 0
+        movespeed = 0
         sprite_index = spr_player_sjumpprep
         state = states.sjump
     }
     
-    if key_prs(ord("Z")) and grounded {
+    if keyjump and grounded {
         state = states.machjump 
         vsp = -10
     }
     
-    if ((key_prs(vk_right) and h_scale == -1) or (key_prs(vk_left) and h_scale == 1)) and sprite_index != spr_player_machjump and grounded {
+    if ((keyright and h_scale == -1) or (keyleft and h_scale == 1)) and sprite_index != spr_player_machjump and grounded {
         image_index = 0
         state = states.machturn
         sprite_index = spr_player_machturn

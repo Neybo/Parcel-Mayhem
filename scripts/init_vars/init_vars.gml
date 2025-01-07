@@ -1,3 +1,6 @@
+#macro SAVE "deny_save.ini"
+#macro gyatt if 
+
 function init_vars(){
     
     enum states {
@@ -20,4 +23,5 @@ function init_vars(){
     global.mach_col2 = make_colour_rgb(248, 0, 0)
     global.tape = 0
     global.save_ds = ds_list_create()
+    global.creditsfont = font_add_sprite_ext(spr_creditsfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.:!0123456789?'\"",  true, 2) 
 }

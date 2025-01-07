@@ -6,8 +6,8 @@
   "name":"obj_doorB",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Door",
+    "path":"folders/Objects/Door.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -27,7 +27,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_doorB",
+    "path":"sprites/spr_doorB/spr_doorB.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

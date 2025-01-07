@@ -7,19 +7,19 @@ function scr_player_mach2() {
         state = states.mach3
     }
     
-    if !key_prs(vk_shift) { 
+    if !keyrun { 
         image_index = 0
         sprite_index = spr_player_machcancel
         state = states.machcancel
     }
     
-    if (key_prs(vk_right) and h_scale == -1) or (key_prs(vk_left) and h_scale == 1) {
+    if (keyright and h_scale == -1) or (keyleft and h_scale == 1) {
         image_index = 0
         sprite_index = spr_player_turn
         state = states.machturn
     }
     
-    if key_prs(ord("Z")) and grounded {
+    if keyjump and grounded {
         vsp = -10
         state = states.machjump
     }

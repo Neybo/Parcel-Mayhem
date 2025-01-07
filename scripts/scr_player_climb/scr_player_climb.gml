@@ -1,7 +1,7 @@
 function scr_player_climb(){
     vsp = -1 * movespeed 
     if movespeed <= 16
-        movespeed += 0.5
+        movespeed += 0.2
     if !place_meeting_solid(x + h_scale, y) {
         var old_x = x
         var old_y = y
@@ -25,13 +25,17 @@ function scr_player_climb(){
         state = states.mach3
         sprite_index = spr_player_mach3
     }
-    if place_meeting_solid(x, y - 1){
-            vsp = 10
-            image_index = 0
-            sprite_index = spr_player_idle
-            state = states.normal       
+    if !keyrun {
+        sprite_index = spr_player_idle
+        state = states.normal
     }
-    if key_prsp(ord("Z")) {
+    if place_meeting_solid(x, y - 1){
+        image_index = 0
+        image_speed = 1
+        sprite_index = spr_player_sjumpland
+        state = states.hitwall           
+    }
+    if keyjump2 {
         h_scale *= -1
         movespeed = 12
         vsp = -10

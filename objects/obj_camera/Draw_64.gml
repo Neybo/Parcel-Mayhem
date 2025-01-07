@@ -17,8 +17,8 @@ var txt_arr1 = [
     "X: ",
     "Y: ",
 ]
-draw_set_color(c_black)
+draw_set_font(global.creditsfont)
 for (var i = 0; i < array_length(txt_arr); i++) {
-    draw_text(50, 50 + i * 20, string_concat(txt_arr1[i], txt_arr[i]))
+    draw_text_scribble(50, 50 + i * 40, string_concat("[shake]", txt_arr1[i], txt_arr[i]))
 }
 draw_set_color(c_white)

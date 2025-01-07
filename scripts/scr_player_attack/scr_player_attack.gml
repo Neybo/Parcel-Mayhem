@@ -4,7 +4,7 @@ function scr_player_attack(){
     if floor(image_index) == image_number - 1 {
         image_index = image_number - 1
     }
-    /*if key_prs(vk_shift) {
+    /*if keyrun {
         image_index = 0
         sprite_index = spr_player_mach3
         state = states.mach3

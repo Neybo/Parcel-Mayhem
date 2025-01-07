@@ -16,7 +16,7 @@ function scr_player_jump(){
             state = states.normal
         }
     } 
-    if key_prs(ord("X")) {
+    if keyaction {
         vsp = -4
         movespeed = 12
         sprite_index = spr_player_attackdash
@@ -24,7 +24,7 @@ function scr_player_jump(){
         state = states.attack
     }
     
-    if key_prs(vk_down) {
+    if keydown {
         image_index = 0
         sprite_index = spr_player_gpoundstart
         state = states.gpound

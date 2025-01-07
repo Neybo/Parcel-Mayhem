@@ -6,11 +6,11 @@ function scr_player_mach() {
         sprite_index = spr_player_mach2
         state = states.mach2
     }
-    if !key_prs(vk_shift) {
+    if !keyrun {
         movespeed = 4
         state = states.normal
     } 
-    if key_prs(ord("Z")) and grounded {
+    if keyjump and grounded {
         vsp = -10
 
     }

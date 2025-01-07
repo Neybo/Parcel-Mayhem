@@ -1,5 +1,5 @@
 function scr_player_machjump(){
-        if sprite_index == spr_player_mach3 or sprite_index == spr_player_mach2 {
+    if sprite_index == spr_player_mach3 or sprite_index == spr_player_mach2 {
         hsp = h_scale * movespeed
         if grounded {
             if sprite_index == spr_player_mach3 {
@@ -16,4 +16,6 @@ function scr_player_machjump(){
                 state = states.climb
         }
     }
+    if !instance_exists(obj_afterimage)
+        inst_cr(x, y, obj_afterimage)
 }

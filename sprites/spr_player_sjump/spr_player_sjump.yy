@@ -32,8 +32,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Mach",
-    "path":"folders/Sprites/Player/Mach.yy",
+    "name":"Superjump",
+    "path":"folders/Sprites/Player/Superjump.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

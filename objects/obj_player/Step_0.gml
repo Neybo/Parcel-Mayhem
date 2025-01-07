@@ -1,9 +1,9 @@
-image_speed = 0.35
 scr_collision()
+input_init()    
 var scale = h_scale;
 image_xscale = scale;
-move = key_prs(vk_right) - key_prs(vk_left)
-if key_prs(vk_f1) game_restart()
+move = keyright - keyleft
+if keyboard_check_pressed(vk_f1) game_restart()
 switch state {
     case states.normal:
         scr_player_normal()

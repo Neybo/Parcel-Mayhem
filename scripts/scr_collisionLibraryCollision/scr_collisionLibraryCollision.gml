@@ -13,12 +13,12 @@ enum Exclude {
 global.MyCollisionList = ds_list_create();
 
 #region Collisions
-/// @desc With this function you can check a place for collision objects. 
-/// @param {any*} x The x position to check.
-/// @param {any*} y The y position to check.
-/// @param {ID.DsList} list The DS list to use to store the IDs of colliding platforms.
-/// @param {real} [exclude] Using the EXLCUDE flags you can exclude types of objects. Ex: (Exclude.SLOPES|Exclude.PLATFORMS). You can also invert it like so: (~Exclude.MOVING).
-/// @returns {real} The number of instances found to be in collision.
+/// @desc  With this function you can check a place for collision objects.
+/// @param {real} x  The x position to check.
+/// @param {real} y  The y position to check.
+/// @param {id.dslist} [list]=Exclude.NONE  The DS list to use to store the IDs of colliding platforms.
+/// @param {real} [exclude]  Using the EXLCUDE flags you can exclude types of objects. Ex: (Exclude.SLOPES|Exclude.PLATFORMS). You can also invert it like so: (~Exclude.MOVING).
+/// @returns {real}  The number of instances found to be in collision.
 function instance_place_list_collision(xx, yy, exclude = Exclude.NONE, list = undefined) {
 	var collided = 0;
 	// Exclude specific types of collisions
