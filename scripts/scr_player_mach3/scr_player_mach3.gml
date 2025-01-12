@@ -1,6 +1,6 @@
 function scr_player_mach3() {
     hsp = h_scale * movespeed
-    if movespeed < 16 movespeed += 0.1
+    if movespeed < 18 movespeed += 0.1
     if !keyrun && sprite_index != spr_player_sjumpcancel {
         image_index = 0
         sprite_index = spr_player_machcancel
@@ -20,6 +20,7 @@ function scr_player_mach3() {
     }
     
     if ((keyright and h_scale == -1) or (keyleft and h_scale == 1)) and sprite_index != spr_player_machjump and grounded {
+        mask_index = spr_player_mask 
         image_index = 0
         state = states.machturn
         sprite_index = spr_player_machturn
@@ -34,7 +35,16 @@ function scr_player_mach3() {
         state = states.climb
     }
     
+    if keydown && grounded {
+        y = y - 5
+        image_index = 0
+        mask_index = mask_playercrouch
+        sprite_index = spr_player_machroll
+        state = states.machslide
+    }
+    
     if place_meeting_solid(x + h_scale, y) and place_meeting_collision(x, y + 1) {
+        mask_index = spr_player_mask 
         hsp = 0
         sprite_index = spr_player_hitwall
         state = states.hitwall

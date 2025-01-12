@@ -24,6 +24,14 @@ function scr_player_mach2() {
         state = states.machjump
     }
     
+    if keydown && grounded {
+        y = y - 5
+        image_index = 0
+        mask_index = mask_playercrouch
+        sprite_index = spr_player_machroll
+        state = states.machslide
+    }
+    
     if place_meeting_solid(x + h_scale, y) and place_meeting_collision(x, y + 1) {
         hsp = 0
         sprite_index = spr_player_hitwall

@@ -7,6 +7,8 @@ var txt_arr = [
     obj_player.grav,
     obj_player.x,
     obj_player.y,
+    obj_player.mask_index,
+    sprite_get_name(obj_player.sprite_index),
 ]
 var txt_arr1 = [
     "MOVESPEED: ",
@@ -16,6 +18,8 @@ var txt_arr1 = [
     "GRAVITY:",
     "X: ",
     "Y: ",
+    "MASK: ",
+    "SPR: ",
 ]
 draw_set_font(global.creditsfont)
 for (var i = 0; i < array_length(txt_arr); i++) {

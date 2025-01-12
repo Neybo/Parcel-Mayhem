@@ -17,6 +17,7 @@ function init_vars(){
         sjump, // !?!??!
         attack,
         machjump,
+        machslide,
     }
     move = -4
     global.mach_col1 = make_colour_rgb(96, 208, 72)

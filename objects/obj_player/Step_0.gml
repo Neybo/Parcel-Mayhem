@@ -44,6 +44,9 @@ switch state {
     case states.machjump:
         scr_player_machjump()
         break
+    case states.machslide:
+        scr_player_machslide() 
+        break
 }
 
 
