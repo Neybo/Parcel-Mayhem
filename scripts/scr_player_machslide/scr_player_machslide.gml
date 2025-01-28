@@ -5,7 +5,7 @@ function scr_player_machslide() {
         image_index = 0
         sprite_index = spr_player_rollgetup
     }
-    if sprite_index == spr_player_rollgetup {
+    if sprite_index == spr_player_rollgetup and floor(image_index) == image_number - 1 {
         if movespeed > 12 {
             mask_index = spr_player_mask 
             image_index = 0

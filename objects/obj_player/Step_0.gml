@@ -1,4 +1,5 @@
 scr_collision()
+col_dest()
 input_init()    
 var scale = h_scale;
 image_xscale = scale;
@@ -48,5 +49,5 @@ switch state {
         scr_player_machslide() 
         break
 }
-
+mach_sound()
 

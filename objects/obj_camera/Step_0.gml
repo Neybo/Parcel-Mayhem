@@ -31,3 +31,4 @@ if (boundaryClamping)
     }
         camera_set_view_pos(view_camera[0], smoothX, smoothY);
 }
+gameframe_update()

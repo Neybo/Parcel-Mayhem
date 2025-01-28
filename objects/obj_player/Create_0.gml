@@ -10,3 +10,4 @@ hallenter = true
 halldir = 1
 hall = false
 image_speed = 0.35
+cum = 0
